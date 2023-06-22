@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      .overlay-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+      }
+      .overlay-text {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: #4d5ae5b2;
+        padding: 10px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        transition-duration: 250ms;
+        transition-property: top;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .overlay-container:hover .overlay-text,
+      .overlay-container:focus .overlay-text {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay-container">
+      <img src="images/img1.jpg" alt="test" />
+      <div class="overlay-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ut non,
+        harum ducimus ratione earum? Accusamus ducimus laborum tempora quia enim
+        eum optio debitis, repellat alias in hic id adipisci!
+      </div>
+    </div>
+  </body>
+</html>
