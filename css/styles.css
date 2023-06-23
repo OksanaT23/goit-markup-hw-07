@@ -646,7 +646,6 @@ img {
 }
 
 .overlay-container {
-  display: inline-block;
   position: relative;
   overflow: hidden;
 }
@@ -730,7 +729,7 @@ img {
   padding: 8px 16px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+  display: block;
 }
 
 .modal-comment:focus {
