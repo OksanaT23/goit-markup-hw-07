@@ -48,10 +48,6 @@ img {
   padding-bottom: 96px;
 }
 
-.padding-top-zero {
-  padding-top: 0;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 16px;
@@ -798,7 +794,8 @@ img {
   .contacts-list {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 12px;
+    flex-direction: column;
   }
   .contacts .link:link,
   .contacts .link:visited {
@@ -860,6 +857,9 @@ img {
   .projects-list-item {
     width: calc((100% - 24px) / 2);
   }
+  .filters-list {
+    justify-content: center;
+  }
   .footer .container {
     width: 552px;
     padding: 0;
@@ -898,6 +898,9 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+  .padding-top-zero {
+    padding-top: 0;
+  }
   .container,
   .footer .container {
     width: 1158px;
@@ -922,6 +925,7 @@ img {
     background: var(--secondary-text-color-2);
     border-radius: 4px;
     margin-bottom: 8px;
+    display: flex;
   }
   .features-list-item .icon svg {
     height: 64px;
