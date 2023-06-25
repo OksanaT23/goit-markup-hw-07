@@ -840,6 +840,12 @@ img {
     width: calc((100% - 48px) / 3);
     height: 88px;
   }
+  .projects-list {
+    gap: 72px 24px;
+  }
+  .projects-list-item {
+    width: calc((100% - 24px) / 2);
+  }
   .footer .container {
     width: 552px;
     padding: 0;
@@ -883,6 +889,12 @@ img {
   }
   .order-service .container {
     padding: 188px 0;
+  }
+  .projects-list {
+    gap: 48px 24px;
+  }
+  .projects-list-item {
+    width: calc((100% - 48px) / 3);
   }
   .features-list {
     display: flex;
