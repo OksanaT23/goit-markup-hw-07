@@ -169,7 +169,7 @@ img {
   color: var(--secondary-text-color-1);
 }
 
-/* Heder */
+/* Header */
 .header {
   border-bottom: 1px solid var(--button-background);
   box-shadow: 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
