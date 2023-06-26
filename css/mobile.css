@@ -43,6 +43,7 @@ img {
   display: block;
   background-color: var(--accent-color);
 }
+
 .padding-y-max {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -135,7 +136,14 @@ img {
   text-align: center;
 }
 
+.header-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 /* Logo */
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -144,6 +152,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
+  padding: 16px;
 }
 .logo:link,
 .logo:visited,
@@ -156,9 +165,120 @@ img {
   color: var(--secondary-text-color-1);
 }
 
-/* Heder */
+.close-button {
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  font-size: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 16px;
+  border: none;
+  background-color: transparent;
+}
+.icon-cross {
+  display: none;
+}
+
+.is-open .menu-button {
+  justify-content: end;
+}
+.is-open .icon-cross {
+  display: block;
+  background-color: #fff;
+}
+
+.is-open .icon-menu {
+  display: none;
+}
+
+.navigation-menu,
+.header-contacts,
+.header-social-icons {
+  display: none;
+}
+.menu-container {
+  padding: 0;
+}
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 80px 35px 40px 40px;
+  text-align: left;
+  font-size: 20px;
+}
+.is-open .navigation-menu,
+.is-open .header-contacts,
+.is-open .header-social-icons {
+  display: block;
+}
+.is-open .navigation-menu {
+  flex-grow: 1;
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.nav-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color-1);
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current-page {
+  color: var(--link-active);
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+.contact-number .contact-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--accent-color);
+}
+.contact-email .contact-link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--the-main-color-of-the-text);
+}
 
 /* Social-icons */
+
 .icon {
   justify-content: center;
   width: 100%;
@@ -208,6 +328,18 @@ img {
   fill: var(--secondary-text-color-2);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-social-icons .social-icons {
+  gap: unset;
+  justify-content: space-between;
+}
+/* Header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0;
+}
 
 /* Order Service */
 .order-service {
@@ -250,6 +382,10 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+}
 .backdrop {
   display: flex;
   position: fixed;
@@ -279,24 +415,6 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px;
   position: absolute;
-}
-.close-button {
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  font-size: 0;
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button:hover,
 .close-button:focus {
@@ -727,8 +845,6 @@ img {
   margin-left: 16px;
 }
 
-@media screen and (min-width: 428px) {
-}
 @media screen and (min-width: 768px) {
   .header {
     border-bottom: 1px solid var(--button-background);
@@ -815,10 +931,7 @@ img {
   .order-service .main-title {
     font-size: 56px;
   }
-  .subtitle {
-    text-align: center;
-    font-size: 20px;
-  }
+
   .features-list {
     display: flex;
     gap: 72px 24px;
