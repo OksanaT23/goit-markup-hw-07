@@ -190,6 +190,9 @@ img {
   border: none;
   background-color: transparent;
 }
+.menu-button svg {
+  stroke: #2e2f42;
+}
 .icon-cross {
   display: none;
 }
