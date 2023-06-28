@@ -863,17 +863,28 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  /* Features */
+  .subtitle {
+    text-align: center;
+    font-size: 20px;
+  }
+  .features .subtitle {
+    text-align: left;
+  }
   .header {
     border-bottom: 1px solid var(--button-background);
     box-shadow: 2px 1px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
+
   .header-container {
     display: flex;
     align-items: center;
   }
   .menu-container {
     display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
   }
   .header-navigation {
     display: flex;
@@ -888,6 +899,10 @@ img {
   .header-contacts {
     display: flex;
   }
+  .navigation-menu {
+    flex-grow: 1;
+    justify-content: center;
+  }
 
   /* Navigation */
   .nav-links {
@@ -895,7 +910,6 @@ img {
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    margin-left: 76px;
   }
 
   .nav-link {
@@ -937,12 +951,15 @@ img {
   .contacts {
     font-style: normal;
     margin-left: auto;
+    margin-right: 16px;
   }
   .contacts-list {
     display: flex;
     align-items: center;
     gap: 12px;
     flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
   .contacts .link:link,
   .contacts .link:visited {
@@ -961,8 +978,10 @@ img {
   }
   .contact-email .contact-link,
   .contact-number .contact-link {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.17;
     font-weight: 400;
+    display: block;
   }
   .order-service .main-title {
     font-size: 56px;
@@ -1011,8 +1030,7 @@ img {
   }
   .footer .container {
     width: 552px;
-    padding: 0;
-    gap: 72px 24px;
+    padding: 0 15px;
   }
   .footer-blocks > div {
     width: auto;
@@ -1032,6 +1050,9 @@ img {
   .form-container {
     flex-direction: row;
   }
+  .footer .logo {
+    margin-bottom: 0;
+  }
   .field-input-label {
     width: 264px;
   }
@@ -1040,14 +1061,13 @@ img {
   }
 }
 
-/* Features */
-.subtitle {
-  text-align: left;
-}
-
 @media screen and (min-width: 1158px) {
   .subtitle {
     font-size: 20px;
+  }
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
   }
   .padding-y-max {
     padding-top: 120px;
@@ -1056,9 +1076,29 @@ img {
   .padding-top-zero {
     padding-top: 0;
   }
+  .header-navigation {
+    gap: 76px;
+  }
+  .logo {
+    padding: 16px 0;
+  }
+  .menu-container {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  .nav-links {
+    margin-left: 0;
+  }
+  .contact-email .contact-link,
+  .contact-number .contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 27px 0;
+  }
   .container,
   .footer .container {
     width: 1158px;
+    padding: 0 15px;
   }
   .order-service .container {
     padding: 188px 0;
@@ -1118,6 +1158,7 @@ img {
   }
   .customers .container {
     width: 1158px;
+    padding: 0 15px;
   }
   .customers-list {
     flex-wrap: nowrap;
@@ -1131,9 +1172,7 @@ img {
     background-color: var(--secondary-text-color-1);
     padding: 100px 0;
   }
-  .footer .logo {
-    margin-bottom: 16px;
-  }
+
   .footer .logo .part-two {
     color: var(--secondary-text-color-2);
   }
@@ -1155,9 +1194,7 @@ img {
     display: flex;
     align-items: baseline;
   }
-  .footer .container {
-    gap: 80px;
-  }
+
   .footer-list {
     display: flex;
     gap: 16px;
@@ -1175,5 +1212,8 @@ img {
   }
   .footer-blocks > .social-media {
     margin-left: 30px;
+  }
+  .customers-list-item .icon {
+    margin-bottom: 0;
   }
 }
