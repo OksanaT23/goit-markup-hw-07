@@ -411,8 +411,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
+  width: calc(100% - 30px);
   min-height: 584px;
+  max-width: 408px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -589,7 +590,7 @@ img {
 }
 .customers-list {
   display: flex;
-  gap: 16px;
+  gap: 72px 16px;
   flex-wrap: wrap;
 }
 .customers-list-item {
@@ -804,6 +805,7 @@ img {
   border-radius: 4px;
   padding-left: 16px;
   width: 100%;
+  max-width: 398px;
   background-color: transparent;
   font-size: 12px;
   line-height: 1.5;
@@ -820,14 +822,10 @@ img {
 }
 .field-input-label {
   display: block;
+  text-align: center;
 }
 .footer-subscribe {
   display: block;
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: #ffffff;
 }
 .subscribe-button {
