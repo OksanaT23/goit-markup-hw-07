@@ -330,10 +330,8 @@ img {
 .is-open .header-social-icons {
   display: flex;
 }
-.is-open .nav-links {
-  flex-grow: 1;
-}
 .header-social-icons {
+  margin-top: 48px;
   justify-content: space-between;
   max-width: 328px;
 }
@@ -956,6 +954,7 @@ img {
     display: flex;
     font-style: normal;
     margin-left: auto;
+    height: 100%;
   }
   .contacts-list {
     display: flex;
