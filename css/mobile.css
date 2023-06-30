@@ -52,6 +52,7 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 16px;
+  max-width: 428px;
 }
 .container-projects {
   padding: 32px 16px;
@@ -152,7 +153,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: inline-block;
-  padding: 16px;
+  padding: 24px 16px;
 }
 .logo:link,
 .logo:visited,
@@ -186,7 +187,7 @@ img {
 .menu-button {
   display: inline-flex;
   margin: 0;
-  padding: 16px;
+  padding: 24px 16px;
   border: none;
   background-color: transparent;
 }
@@ -576,6 +577,10 @@ img {
   padding: 32px 16px;
   text-align: center;
 }
+.team-text {
+  font-weight: 400;
+  line-height: 1.5;
+}
 .member-info .social-icons {
   margin-top: 8px;
 }
@@ -700,6 +705,7 @@ img {
   padding: 96px 0;
 }
 .footer .logo {
+  padding: 0;
   margin-bottom: 16px;
 }
 .footer .logo .part-two {
@@ -724,7 +730,6 @@ img {
 }
 .footer-blocks {
   display: flex;
-  align-items: baseline;
   flex-wrap: wrap;
   gap: 72px;
 }
@@ -878,16 +883,19 @@ img {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
   .container {
-    width: 584px;
+    max-width: 768px;
   }
-  .header-container {
-    display: flex;
-    align-items: center;
+  .logo {
+    padding-left: 0;
+    padding-right: 0;
   }
   .menu-container {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+  }
+  .header-container {
+    padding: 0 16px;
   }
   .header-navigation {
     display: flex;
@@ -954,7 +962,6 @@ img {
   .contacts {
     font-style: normal;
     margin-left: auto;
-    margin-right: 16px;
   }
   .contacts-list {
     display: flex;
@@ -992,10 +999,6 @@ img {
   .order-service .button {
     margin-top: 36px;
   }
-  .header-container,
-  .features-container {
-    width: 768px;
-  }
   .features-list {
     display: flex;
     gap: 72px 24px;
@@ -1004,6 +1007,11 @@ img {
   }
   .features-list-item {
     width: calc((100% - 24px) / 2);
+  }
+  .team .container,
+  .customers .container,
+  .footer-blocks {
+    max-width: 584px;
   }
   .team-list {
     flex-direction: row;
@@ -1014,10 +1022,6 @@ img {
   }
   .team-list-item {
     width: 264px;
-  }
-  .customers .container {
-    width: 552px;
-    padding: 0;
   }
   .customers-list {
     display: flex;
@@ -1037,15 +1041,18 @@ img {
   .filters-list {
     justify-content: center;
   }
-  .footer .container {
-    width: 552px;
-    padding: 0;
+  .footer-blocks {
+    gap: unset;
   }
   .footer-blocks > div {
     width: auto;
   }
+  .footer-blocks > .footer-container {
+    margin-right: 24px;
+  }
   .footer-blocks > .subscribe-block {
     width: 100%;
+    margin-top: 72px;
   }
   .footer-subscribe,
   .footer-container,
@@ -1054,9 +1061,6 @@ img {
   }
   .form-container {
     flex-direction: row;
-  }
-  .footer .logo {
-    margin-bottom: 0;
   }
   .field-input-label {
     width: 264px;
@@ -1084,13 +1088,13 @@ img {
   .header-navigation {
     gap: 76px;
   }
-  .logo {
-    padding: 16px 0;
-  }
 
   .menu-container {
     flex-grow: 1;
     justify-content: space-between;
+  }
+  .navigation-menu {
+    flex-grow: unset;
   }
   .nav-links {
     margin-left: 0;
@@ -1102,12 +1106,10 @@ img {
   .contact-number .contact-link {
     font-size: 16px;
     line-height: 1.5;
-    padding: 27px 0;
+    padding: 24px 0;
   }
-  .container,
-  .footer .container {
-    width: 1158px;
-    padding: 0 15px;
+  .container {
+    max-width: 1158px;
   }
   .order-service .container {
     padding: 188px 0;
@@ -1120,6 +1122,14 @@ img {
   }
   .projects-list-item {
     width: calc((100% - 48px) / 3);
+  }
+  .features .subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .feature-text {
+    font-weight: 400;
   }
   .features-list {
     display: flex;
@@ -1158,6 +1168,11 @@ img {
   }
   .services-list-item {
     width: calc((100% - 48px) / 3);
+  }
+  .team .container,
+  .customers .container,
+  .footer-blocks {
+    max-width: 1158px;
   }
   .team-list {
     gap: 24px;
@@ -1204,9 +1219,15 @@ img {
   }
   .footer-blocks {
     display: flex;
-    align-items: baseline;
+    gap: unset;
   }
-
+  .footer-blocks > .footer-container {
+    margin-right: 0;
+  }
+  .footer-blocks > .social-media {
+    margin-left: 120px;
+    margin-right: 80px;
+  }
   .footer-list {
     display: flex;
     gap: 16px;
@@ -1221,5 +1242,6 @@ img {
   }
   .footer-blocks > .subscribe-block {
     width: auto;
+    margin-top: 0;
   }
 }
